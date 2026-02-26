@@ -1,0 +1,335 @@
+<!-- ===================== HERO ===================== -->
+<section class="hero-section">
+  <div class="blob blob-1"></div>
+  <div class="blob blob-2"></div>
+
+  <div class="container hero-container">
+    <div class="hero-content">
+      <div class="badge-hero">
+        <span class="badge-dot"></span> Available for Work
+      </div>
+      <h1 class="hero-title">Mohamed <span class="accent">Ibrahem</span> Mosbah</h1>
+      <p class="hero-subtitle">Crafting modern, high-performance web experiences with <strong>Angular</strong> &amp;
+        <strong>Modern UI</strong>.
+      </p>
+
+      <div class="tech-stack">
+        <div class="tech-item" title="Angular"><i class="fa-brands fa-angular"></i></div>
+        <div class="tech-item" title="JavaScript"><i class="fa-brands fa-js"></i></div>
+        <div class="tech-item" title="HTML5"><i class="fa-brands fa-html5"></i></div>
+        <div class="tech-item" title="CSS3"><i class="fa-brands fa-css3-alt"></i></div>
+        <div class="tech-item" title="Bootstrap"><i class="fa-brands fa-bootstrap"></i></div>
+      </div>
+
+      <div class="social-links">
+        <a href="https://github.com/mohamed-ibrahem123" class="social-icon" title="GitHub" target="_blank"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://www.instagram.com/mohamed_ibrahem.2?igsh=MW10N3FiYTRsYnBzcA%3D%3D&utm_source=qr"
+          class="social-icon" title="Instagram" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="#" class="social-icon" title="X (Twitter)"><i class="fa-brands fa-x-twitter"></i></a>
+        <a href="https://www.linkedin.com/in/mohamed-ibrahem-a12528349/" class="social-icon" title="LinkedIn"
+          target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+      </div>
+      <div class="hero-action">
+        <button class="cta-button" routerLink="/my-work">
+          <span>Explore Projects</span>
+          <i class="fa-solid fa-arrow-right"></i>
+        </button>
+        <a routerLink="/Contact-me" class="secondary-link">
+          <i class="fa-solid fa-paper-plane"></i>
+          <span>Contact Me</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="hero-image-wrapper">
+      <div class="image-orbit"></div>
+      <div class="floating-icon icon-1"><i class="fa-brands fa-angular"></i></div>
+      <div class="floating-icon icon-2"><i class="fa-brands fa-css3-alt"></i></div>
+      <div class="floating-icon icon-3"><i class="fa-brands fa-js-square"></i></div>
+      <img src="assets/my-photo-without-bg.png" alt="Mohamed Mosbah" class="hero-image">
+    </div>
+  </div>
+
+  <div class="scroll-indicator">
+    <div class="mouse"></div>
+    <span>Scroll Down</span>
+  </div>
+</section>
+
+<!-- ===================== SERVICES ===================== -->
+<section class="services-section glass-bg animate-on-scroll" id="services" appScrollAnimate>
+  <div class="blob blob-3"></div>
+  <div class="blob blob-4"></div>
+
+  <div class="container relative-z">
+    <h2 class="section-title centered">
+      <span class="title-icon"><i class="fa-solid fa-screwdriver-wrench"></i></span> Core Services
+    </h2>
+    <div class="services-grid">
+      <div class="service-card glass" *ngFor="let service of services; let i = index"
+        [style.animation-delay]="(i * 0.1) + 's'">
+        <div class="service-icon-wrap"><i [class]="service.icon"></i></div>
+        <h3>{{service.title}}</h3>
+        <p>{{service.desc}}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ME ===================== -->
+<section class="about-section animate-on-scroll" id="about" appScrollAnimate>
+  <div class="blob blob-5"></div>
+  <div class="container relative-z">
+    <h2 class="section-title centered">
+      <span class="title-icon"><i class="fa-solid fa-user-tie"></i></span> About Me
+    </h2>
+    <div class="about-layout">
+      <!-- LEFT: Photo + quick stats -->
+      <div class="about-photo-col">
+        <div class="about-photo-card glass-glow slide-up-card">
+          <img src="assets/my-photo-4.jpeg" alt="Mohamed Mosbah">
+          <div class="photo-pulse"></div>
+        </div>
+        <div class="about-stats">
+          <div class="stat-item glass slide-up-card" style="animation-delay: 0.1s;">
+            <span class="stat-number">2+</span>
+            <span class="stat-label">
+              <i class="fa-solid fa-calendar-check"></i>
+              Years Experience
+            </span>
+          </div>
+          <div class="stat-item glass slide-up-card" style="animation-delay: 0.2s;">
+            <span class="stat-number">4+</span>
+            <span class="stat-label">
+              <i class="fa-solid fa-rocket"></i>
+              Projects Done
+            </span>
+          </div>
+          <div class="stat-item glass slide-up-card" style="animation-delay: 0.3s;">
+            <span class="stat-number">5+</span>
+            <span class="stat-label">
+              <i class="fa-solid fa-certificate"></i>
+              Certificates
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT: Description & info cards -->
+      <div class="about-info-col">
+        <div class="info-hero-card glass slide-up-card" style="animation-delay: 0.1s;">
+          <p class="section-description">
+            Passionate <strong>Frontend Developer</strong> with hands-on experience in building modern, scalable,
+            and responsive web applications. I specialize in <strong>HTML5</strong>, <strong>CSS3</strong>,
+            <strong>JavaScript (ES6+)</strong>, <strong>Bootstrap</strong>, and <strong>Angular</strong>.
+            My goal is to deliver reliable and maintainable solutions tailored to business needs with a focus
+            on clean code and premium UI/UX principles.
+          </p>
+        </div>
+
+        <div class="about-info-cards">
+          <div class="info-card glass flex-hover slide-up-card" style="animation-delay: 0.2s;">
+            <i class="fa-solid fa-map-pin icon-pop"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Mansoura, Egypt</p>
+            </div>
+          </div>
+          <div class="info-card glass flex-hover slide-up-card" style="animation-delay: 0.3s;">
+            <i class="fa-solid fa-briefcase icon-pop"></i>
+            <div>
+              <h4>Role</h4>
+              <p>Frontend Developer</p>
+            </div>
+          </div>
+          <div class="info-card glass flex-hover slide-up-card" style="animation-delay: 0.4s;">
+            <i class="fa-solid fa-graduation-cap icon-pop"></i>
+            <div>
+              <h4>Education</h4>
+              <p>Mansoura University</p>
+            </div>
+          </div>
+          <div class="info-card glass flex-hover slide-up-card" style="animation-delay: 0.5s;">
+            <i class="fa-brands fa-angular icon-pop"></i>
+            <div>
+              <h4>Specialty</h4>
+              <p>Angular & TypeScript</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="coursework glass slide-up-card"
+          style="padding: 1.5rem; border-radius: 18px; animation-delay: 0.6s;">
+          <h3 class="small-title"><i class="fa-solid fa-graduation-cap"></i> Relevant Coursework</h3>
+          <div class="coursework-grid">
+            <span class="badge badge-glow"><i class="fa-solid fa-code"></i> OOP</span>
+            <span class="badge badge-glow"><i class="fa-solid fa-database"></i> Data Structures</span>
+            <span class="badge badge-glow"><i class="fa-solid fa-microchip"></i> Operating Systems</span>
+            <span class="badge badge-glow"><i class="fa-solid fa-network-wired"></i> Networking</span>
+            <span class="badge badge-glow"><i class="fa-solid fa-cube"></i> Algorithms</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CAREER & EDUCATION ===================== -->
+<section class="education-section glass-bg animate-on-scroll" id="education" appScrollAnimate>
+  <div class="blob blob-6"></div>
+  <div class="blob blob-7"></div>
+  <div class="container relative-z">
+    <h2 class="section-title centered">
+      <span class="title-icon"><i class="fa-solid fa-timeline"></i></span> Career &amp; Education
+    </h2>
+
+    <div class="edu-layout">
+      <!-- Timeline -->
+      <div class="timeline-col">
+        <h3 class="col-title"><i class="fa-solid fa-briefcase"></i> Experience</h3>
+        <div class="timeline">
+          <div class="timeline-item timeline-stagger" *ngFor="let item of experience; let i = index">
+            <div class="timeline-dot pulse-dot">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="timeline-card glass slide-up-card">
+              <div class="timeline-header">
+                <span class="tl-date"><i class="fa-regular fa-calendar"></i> {{item.year}}</span>
+                <!-- <span class="tl-badge">{{i === 0 ? 'Current' : 'Past'}}</span> -->
+              </div>
+              <h3>{{item.title}}</h3>
+              <h4><i class="fa-solid fa-building"></i> {{item.company}}</h4>
+              <p>{{item.desc}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Certificates -->
+      <div class="certs-col">
+        <h3 class="col-title"><i class="fa-solid fa-award"></i> Certificates</h3>
+
+        <!-- nti -->
+        <details class="education-details glass slide-up-card" open>
+          <summary>
+            <span class="summary-icon icon-bounce"><i class="fa-solid fa-satellite-dish"></i></span>
+            <span>Mean Stack Development — NTI </span>
+            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+          </summary>
+          <div class="certificate-grid single">
+            <div class="cert-thumb" (click)="openImage('assets/nti.jpg')">
+              <img src="assets/nti.jpg" alt="nti">
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+          </div>
+        </details>
+        <!-- english  -->
+        <details class="education-details glass slide-up-card">
+          <summary>
+            <span class="summary-icon icon-bounce"><i class="fa-solid fa-language"></i></span>
+            <span>English Studies — American Lab</span>
+            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+          </summary>
+          <div class="certificate-grid">
+            <div class="cert-thumb" (click)="openImage('assets/1.jpeg')">
+              <img src="assets/1.jpeg" alt="Certificate 1">
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-thumb" (click)="openImage('assets/2.jpeg')">
+              <img src="assets/2.jpeg" alt="Certificate 2">
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-thumb" (click)="openImage('assets/5-6-7.jpeg')">
+              <img src="assets/5-6-7.jpeg" alt="Certificate 3">
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+            <div class="cert-thumb" (click)="openImage('assets/8-9-10.jpeg')">
+              <img src="assets/8-9-10.jpeg" alt="Certificate 4">
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+          </div>
+        </details>
+        <!-- american council -->
+        <details class="education-details glass slide-up-card">
+          <summary>
+            <span class="summary-icon icon-bounce"><i class="fa-solid fa-certificate"></i></span>
+            <span>Frontend &amp; UX — American Council</span>
+            <i class="fa-solid fa-chevron-down arrow-icon"></i>
+          </summary>
+          <div class="certificate-grid single">
+            <div class="cert-thumb" (click)="openImage('assets/american-counsil.jpeg')">
+              <img src="assets/american-counsil.jpeg" alt="American Council Certificate">
+              <div class="cert-overlay"><i class="fa-solid fa-expand"></i></div>
+            </div>
+          </div>
+        </details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section class="skills-section animate-on-scroll" id="skills" appScrollAnimate>
+  <div class="blob blob-8"></div>
+  <div class="container flex-layout relative-z">
+    <div class="section-image">
+      <img src="assets/logo2.webp" alt="Skills Illustration" class="floating-img float-heavy slide-up-card">
+    </div>
+    <div class="section-content glass skill-glass-panel slide-up-card" style="animation-delay: 0.2s;">
+      <h2 class="section-title"><span class="title-icon icon-bounce"><i class="fa-solid fa-bolt"></i></span> Technical
+        Mastery</h2>
+      <div class="skill-category">
+        <div class="skill-group skill-stagger slide-up-card" style="animation-delay: 0.3s;">
+          <div class="skill-info">
+            <span><i class="fa-brands fa-angular skill-icon"></i> Angular Framework (v17+)</span>
+            <span class="skill-percent">85%</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-fill glow-pulse" style="width: 85%"></div>
+          </div>
+        </div>
+        <div class="skill-group skill-stagger slide-up-card" style="animation-delay: 0.4s;">
+          <div class="skill-info">
+            <span><i class="fa-brands fa-js skill-icon"></i> ES6+ &amp; TypeScript</span>
+            <span class="skill-percent">80%</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-fill glow-pulse" style="width: 80%"></div>
+          </div>
+        </div>
+        <div class="skill-group skill-stagger slide-up-card" style="animation-delay: 0.5s;">
+          <div class="skill-info">
+            <span><i class="fa-solid fa-pen-nib skill-icon"></i> UI/UX Design &amp; Figma</span>
+            <span class="skill-percent">75%</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-fill glow-pulse" style="width: 75%"></div>
+          </div>
+        </div>
+        <div class="skill-group skill-stagger slide-up-card" style="animation-delay: 0.6s;">
+          <div class="skill-info">
+            <span><i class="fa-brands fa-bootstrap skill-icon"></i> Bootstrap / SCSS</span>
+            <span class="skill-percent">90%</span>
+          </div>
+          <div class="progress-container">
+            <div class="progress-fill glow-pulse" style="width: 90%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== IMAGE MODAL ===================== -->
+<div class="custom-modal" *ngIf="selectedImage()" (click)="closeImage()">
+  <div class="modal-wrapper" (click)="$event.stopPropagation()">
+    <button class="close-btn" (click)="closeImage()">
+      <i class="fa-solid fa-xmark"></i>
+    </button>
+    <div class="modal-img-container">
+      <img [src]="selectedImage()" alt="Full View Certificate" class="modal-img">
+    </div>
+    <p class="modal-hint"><i class="fa-solid fa-hand-pointer"></i> Click outside to close</p>
+  </div>
+</div>

@@ -1,0 +1,136 @@
+<!-- ===================== MY WORK ===================== -->
+<section class="work-section" id="work">
+
+    <!-- Animated blobs -->
+    <div class="w-blob w-blob-1"></div>
+    <div class="w-blob w-blob-2"></div>
+    <div class="w-blob w-blob-3"></div>
+
+    <!-- Floating particles -->
+    <div class="particles">
+        <span class="particle wp-1"></span>
+        <span class="particle wp-2"></span>
+        <span class="particle wp-3"></span>
+        <span class="particle wp-4"></span>
+        <span class="particle wp-5"></span>
+    </div>
+
+    <div class="container relative-z">
+
+        <!-- ===== SECTION HEADER ===== -->
+        <div class="section-header animate-on-scroll" appScrollAnimate>
+
+            <div class="work-badge">
+                <span class="badge-dot"></span>
+                <i class="fa-solid fa-briefcase"></i>
+                <span>Portfolio</span>
+            </div>
+
+            <h1 class="work-title">
+                My <span class="accent-gradient">Case Studies</span>
+            </h1>
+
+            <p class="work-description">
+                A curated selection of my recent creations — from robust enterprise dashboards
+                to immersive digital experiences, each built with precision and passion.
+            </p>
+
+            <!-- ── Filter tabs ── -->
+            <div class="filter-bar">
+                <button *ngFor="let f of filters" class="filter-btn" [class.active]="activeFilter() === f"
+                    (click)="setFilter(f)" id="filter-{{ f.replace(' ', '-').toLowerCase() }}">
+                    {{ f }}
+                </button>
+            </div>
+
+        </div>
+
+        <!-- ===== PROJECT GRID ===== -->
+        <div class="work-grid">
+
+            <div *ngFor="let project of filteredProjects; let i = index" class="project-card animate-on-scroll"
+                appScrollAnimate [class.featured]="project.featured" [style.--delay]="(i * 0.1) + 's'">
+
+                <!-- Image area -->
+                <div class="project-image">
+                    <img [src]="project.image" [alt]="project.title" loading="lazy">
+
+                    <!-- Category chip on image -->
+                    <div class="img-chip">
+                        <i [class]="project.categoryIcon"></i>
+                        <span>{{ project.category }}</span>
+                    </div>
+
+                    <!-- Featured badge -->
+                    <div class="featured-badge" *ngIf="project.featured">
+                        <i class="fa-solid fa-star"></i> Featured
+                    </div>
+
+                    <!-- Overlay -->
+                    <div class="project-overlay">
+                        <div class="overlay-actions">
+                            <a [href]="project.liveUrl" class="overlay-btn" title="View Live" target="_blank">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Live</span>
+                            </a>
+                            <a [href]="project.codeUrl" class="overlay-btn ghost" title="Source Code" target="_blank">
+                                <i class="fa-brands fa-github"></i>
+                                <span>Code</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Info area -->
+                <div class="project-info">
+
+                    <div class="project-meta">
+                        <span class="project-year">
+                            <i class="fa-regular fa-calendar"></i>
+                            {{ project.year }}
+                        </span>
+                    </div>
+
+                    <h3 class="project-title">{{ project.title }}</h3>
+                    <p class="project-desc">{{ project.description }}</p>
+
+                    <div class="project-tags">
+                        <span class="tag" *ngFor="let tag of project.tags">{{ tag }}</span>
+                    </div>
+
+                    <!-- Card footer -->
+                    <div class="card-footer">
+                        <a [href]="project.liveUrl" class="card-link primary" target="_blank">
+                            <span>View Project</span>
+                            <i class="fa-solid fa-arrow-right link-arrow"></i>
+                        </a>
+                        <a [href]="project.codeUrl" class="card-link ghost" target="_blank" title="GitHub">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+
+                </div>
+
+                <!-- Corner glow -->
+                <div class="card-glow"></div>
+            </div>
+
+        </div>
+
+        <!-- ===== VIEW MORE ===== -->
+        <div class="view-more-wrap animate-on-scroll" appScrollAnimate>
+            <div class="view-more-line"></div>
+            <button class="view-more-btn" id="view-full-archive-btn">
+                <span class="btn-bg-layer"></span>
+                <span class="btn-inner">
+                    <i class="fa-solid fa-folder-open"></i>
+                    <span>View Full Archive</span>
+                    <i class="fa-solid fa-arrow-right btn-arrow"></i>
+                </span>
+                <div class="btn-shine"></div>
+            </button>
+            <div class="view-more-line"></div>
+        </div>
+
+    </div>
+</section>

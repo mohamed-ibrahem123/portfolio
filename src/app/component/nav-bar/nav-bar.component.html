@@ -1,0 +1,103 @@
+<nav class="navbar" [class.scrolled]="isScrolled()">
+    <div class="container nav-container">
+        <a routerLink="/" class="logo" (click)="closeMenu()">
+            <img src="assets/logo3.webp" alt="Logo">
+        </a>
+
+        <!-- Desktop Nav -->
+        <ul class="nav-links-desktop">
+            <li><a routerLink="/Home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">Home</a></li>
+            <li><a routerLink="/my-work" routerLinkActive="active">Projects</a></li>
+            <li><a routerLink="/Contact-me" routerLinkActive="active">Contact</a></li>
+            <li>
+                <a href="#" class="resume-btn" (click)="downloadResume()">
+                    <i class=" fa-solid fa-download"></i> Resume
+                </a>
+            </li>
+        </ul>
+
+        <!-- Desktop: Dark Mode + Hamburger -->
+        <div class="nav-right">
+            <!-- Professional Theme Toggle Switch -->
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle">
+                    <input type="checkbox" id="theme-toggle" [checked]="!isDarkMode()" (change)="toggleTheme()">
+                    <div class="slider round">
+                        <div class="celestial-body-wrap">
+                            <div class="celestial-body">
+                                <i class="fa-solid fa-moon icon-moon"></i>
+                                <i class="fa-solid fa-sun icon-sun"></i>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+
+            <button class="menu-toggle" [class.active]="isMenuOpen()" (click)="toggleMenu()" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- Mobile Sidebar Overlay -->
+<div class="sidebar-overlay" [class.visible]="isMenuOpen()" (click)="toggleMenu()"></div>
+
+<!-- Mobile Sidebar -->
+<aside class="mobile-sidebar" [class.open]="isMenuOpen()">
+    <!-- Sidebar Header -->
+    <div class="sidebar-header">
+        <a routerLink="/" class="logo" (click)="closeMenu()">
+            <img src="assets/logo3.webp" alt="Logo">
+        </a>
+        <div class="sidebar-actions">
+            <div class="theme-switch-wrapper">
+                <label class="theme-switch" for="theme-toggle-mobile">
+                    <input type="checkbox" id="theme-toggle-mobile" [checked]="!isDarkMode()" (change)="toggleTheme()">
+                    <div class="slider round">
+                        <div class="celestial-body-wrap">
+                            <div class="celestial-body">
+                                <i class="fa-solid fa-moon icon-moon"></i>
+                                <i class="fa-solid fa-sun icon-sun"></i>
+                            </div>
+                        </div>
+                    </div>
+                </label>
+            </div>
+            <button class="sidebar-close" (click)="toggleMenu()" aria-label="Close menu">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- Sidebar Links -->
+    <nav class="sidebar-nav">
+        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" (click)="closeMenu()">
+            <span class="sidebar-icon"><i class="fa-solid fa-house"></i></span>
+            <span>Home</span>
+        </a>
+        <a routerLink="/my-work" routerLinkActive="active" (click)="closeMenu()">
+            <span class="sidebar-icon"><i class="fa-solid fa-briefcase"></i></span>
+            <span>Projects</span>
+        </a>
+        <a routerLink="/Contact-me" routerLinkActive="active" (click)="closeMenu()">
+            <span class="sidebar-icon"><i class="fa-solid fa-paper-plane"></i></span>
+            <span>Contact</span>
+        </a>
+    </nav>
+
+    <!-- Sidebar Footer -->
+    <div class="sidebar-footer">
+        <a href="#" class="resume-btn-sidebar" (click)="$event.preventDefault()">
+            <i class="fa-solid fa-file-arrow-down"></i>
+            Download Resume
+        </a>
+        <div class="sidebar-socials">
+            <a href="#" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="#" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="#" title="Instagram"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+    </div>
+</aside>
