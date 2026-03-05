@@ -53,7 +53,7 @@ export class MyWorkComponent {
       year: '2025',
       image: 'assets/rafeeq.png',
       tags: ['Angular', 'TypeScript', 'HTML5', 'CSS3'],
-      liveUrl: '#',
+      liveUrl: 'https://rafeeq-software-project.github.io/frontend-web/',
       codeUrl: 'https://github.com/Rafeeq-Software-Project/frontend-web',
       featured: true
     },

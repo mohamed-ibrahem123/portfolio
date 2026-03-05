@@ -16,6 +16,9 @@ export class ContactMeComponent {
 
   isSubmitting = signal(false);
   submitted = signal(false);
+  EMAIL_ADDRESS = "mohamedm123t@gmail.com";
+
+
 
   onSubmit(): void {
     if (this.isSubmitting()) return;

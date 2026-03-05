@@ -40,14 +40,14 @@
             <!-- Contact method cards -->
             <div class="contact-methods">
 
-                <a href="mailto:mohamed.mosbah@email.com" class="contact-card glass-card stagger-1">
+                <a [href]="'mailto:' + EMAIL_ADDRESS" class="contact-card glass-card stagger-1">
                     <div class="card-icon-wrap">
                         <i class="fa-solid fa-envelope-open-text"></i>
                         <div class="icon-ripple"></div>
                     </div>
                     <div class="card-text">
                         <h4>Email Me</h4>
-                        <p>mohamedm123t&#64;email.com</p>
+                        <p>{{EMAIL_ADDRESS}}</p>
                     </div>
                     <i class="fa-solid fa-arrow-right card-arrow"></i>
                 </a>
