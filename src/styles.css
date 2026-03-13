@@ -14,7 +14,7 @@
   --card-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
   --font-heading: 'Lexend', sans-serif;
   --font-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 /* ============================================
@@ -140,11 +140,25 @@ h6 {
 .animate-on-scroll {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1),
-    transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: opacity, transform;
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
 .animate-on-scroll.show {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Premium utility classes */
+.blur-backdrop {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--primary), #38bdf8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }

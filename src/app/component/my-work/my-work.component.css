@@ -24,6 +24,7 @@
     filter: blur(80px);
     z-index: 0;
     pointer-events: none;
+    will-change: transform;
     animation: wBlobFloat 20s infinite alternate ease-in-out;
 }
 
@@ -87,6 +88,7 @@
     border-radius: 50%;
     background: var(--primary);
     opacity: 0;
+    will-change: transform, opacity;
     animation: wParticleFloat 12s infinite ease-in-out;
 }
 
@@ -229,9 +231,17 @@
 
 .accent-gradient {
     background: linear-gradient(135deg, #8b5cf6 0%, #38bdf8 55%, #ec4899 100%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: textGradientAnim 5s ease infinite;
+}
+
+@keyframes textGradientAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Description */
@@ -704,7 +714,7 @@
     font-weight: 700;
     overflow: hidden;
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.28);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     color: white;
 }
 

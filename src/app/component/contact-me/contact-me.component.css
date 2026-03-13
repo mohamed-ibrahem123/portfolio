@@ -22,6 +22,7 @@
     border-radius: 50%;
     filter: blur(80px);
     z-index: 0;
+    will-change: transform;
     animation: cBlobFloat 20s infinite alternate ease-in-out;
     pointer-events: none;
 }
@@ -86,6 +87,7 @@
     border-radius: 50%;
     background: var(--primary);
     opacity: 0;
+    will-change: transform, opacity;
     animation: particleFloat 10s infinite ease-in-out;
 }
 
@@ -249,9 +251,17 @@
 
 .accent-gradient {
     background: linear-gradient(135deg, #8b5cf6 0%, #38bdf8 60%, #ec4899 100%);
+    background-size: 200% auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    animation: textGradientAnim 5s ease infinite;
+}
+
+@keyframes textGradientAnim {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 /* Sub-text */
@@ -614,6 +624,7 @@
     color: var(--primary);
     flex-shrink: 0;
     box-shadow: 0 6px 18px rgba(139, 92, 246, 0.2);
+    will-change: transform;
     animation: headerIconFloat 4s ease-in-out infinite;
 }
 
@@ -753,7 +764,7 @@
     font-weight: 700;
     font-family: var(--font-body);
     overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
     box-shadow: 0 8px 24px rgba(139, 92, 246, 0.3);
     color: white;
 }
